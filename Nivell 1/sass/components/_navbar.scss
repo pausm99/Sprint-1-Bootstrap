@@ -1,0 +1,94 @@
+.navbar {
+    margin: 0 auto;
+    width: 100%;
+    padding-right: 5%;
+    padding-left: 5%;
+    height: 10vh;
+
+    button {
+        padding: 0.5rem 2.2rem;
+        color: $white;
+    }
+
+    a, button {
+        text-transform: uppercase;
+    }
+
+    ul {
+        display: none;
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+
+        padding-top: 1.5rem;
+
+        ul {
+            display: flex;
+            gap: 1rem;
+
+            * {
+                font-size: 0.85rem;
+            }
+
+            button {
+                padding: 0.25rem 1.5rem;
+            }
+        }
+
+        #hamburger {
+            display: none;
+        }
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+
+        img {
+            width: 110%;
+        }
+        
+        ul {
+
+            gap: 2rem;
+
+            * {
+                font-size: 1.2rem;
+            }
+
+            button {
+                padding: 0.5rem 2rem;
+            }
+
+        }
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        padding-left: 5%;
+        padding-right: 5%;
+
+        img {
+            width: 120%;
+        }
+
+        ul {
+            gap: 2.5rem;
+        }
+    }
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        padding-left: 10%;
+        padding-right: 10%;
+        
+        ul {
+            * {
+                font-size: 1.3rem;
+            }
+
+            gap: 2.75rem;
+        }
+     }
+    
+}

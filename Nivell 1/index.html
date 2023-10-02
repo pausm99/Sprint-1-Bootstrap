@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.min.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Nivell 1 - Exercici 1</title>
+</head>
+<body>
+    <div class="d-flex flex-column justify-content-center" id="page-wrapper">
+        <nav class="navbar sticky-top bg-white">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo-bookmark.svg" alt="Bookmark FavIcon">
+                </a>
+            </div>
+            <ul class="navbar-nav flex-row justify-content-between align-items-center" id="navbar-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary">Login</button>
+                </li>
+            </ul>
+            <span class="navbar-nav" id="hamburger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15"><path fill="#242A45" fill-rule="evenodd" d="M0 0h18v3H0V0zm0 6h18v3H0V6zm0 6h18v3H0v-3z"/></svg>
+            </span>
+        </nav>
+        <div class="main-page">
+            <div class="row align-items-center" id="main-content">
+                <div class="col-12 col-lg-6 order-md-2" id="main-content-image">
+                    <img src="img/illustration-hero.svg">
+                </div>
+                <div class="col-12 col-lg-6 order-2 order-md-1" id="main-content-body">
+                    <h1>A Simple Bookmark Manager</h1>
+                    <p>A clean and simple interface to organize your favourite websites. Open a new browser and see your sites load instantly. Try it for free.</p>
+                    <div class="d-flex gap-3" id="get-app-buttons">
+                        <button type="button" class="btn btn-primary">Get it on Chrome</button>
+                        <button type="button" class="btn btn-light">Get it on Firefox</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+#main-content {
+    margin: 0 auto;
+    width: 95%;
+    height: 90vh;
+
+
+    &-image {
+        position: relative;
+        padding-bottom: 0.75rem;
+
+        &::before {
+            content: '';
+            height: 75%;
+            width: 80%;
+            background-color: $primary;
+            position: absolute;
+            bottom: 0;
+            right: -2.5%;
+            border-radius: 0 0 0 30%;
+            z-index: -1;
+        }
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    &-body {
+
+        * {
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 1.75rem;
+            font-size: 2rem;
+        }
+
+        p {
+            line-height: 1.85rem;
+            margin-bottom: 1.75rem;
+            font-size: 1.3rem;
+            color: $gray-500;
+        }
+
+        #get-app-buttons {
+            justify-content: center;
+
+            button {
+                padding: 0.75rem 1rem;
+            }
+
+            .btn-light {
+                color: $gray-800;
+            }
+        }
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+
+        &-body {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            #get-app-buttons {
+                button {
+                    padding: 1rem 1.25rem;
+                }
+            }
+        }
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        margin-top: 1.5rem;
+        gap: 2rem;
+     }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        gap: 0;
+        width: 90%;
+        margin-top: 0;
+
+        * {
+            text-align: left;
+        }
+
+        &-image {
+            &::before {
+                right: -11.1%;
+            }
+        }
+
+        &-body {
+            #get-app-buttons {
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        width: 80%;
+
+        &-image {
+
+            &::before {
+                right: -25%;
+            }
+
+            img {
+                width: 110%;
+                transform: translateX(10%);
+            }
+        }
+
+        &-body {
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
