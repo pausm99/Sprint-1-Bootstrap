@@ -1,0 +1,169 @@
+#extension {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 3rem;
+    gap: 2rem;
+
+    .extension-cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        width: 90%;
+    }
+
+    .custom-card {
+        border: 1px solid $gray-100;
+        box-shadow: 
+            0 0 10px rgba(0, 0, 0, 0.1),
+            0 12px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 5%;
+        padding: 0;
+
+        &-top {
+            padding: 1rem;
+            img {
+                height: auto;
+                padding: 1.5rem 2rem;
+            }
+    
+            .extension-requirements {
+                padding-top: 0;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+        
+        &-bottom {
+            padding: 1.25rem 0;
+
+            .btn {
+                padding: 0.75rem 1.5rem;
+            }
+        }
+    }
+
+    @media (min-width: 425px) {
+        .extension-cards {
+            padding: 0 10%;
+            width: 85%;
+
+            .custom-card-top {
+                padding: 3rem 1rem;
+
+                img {
+                    padding: 0rem;
+                }
+
+                .extension-requirements {
+                    padding-top: 2rem;
+                }
+            }
+        }
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) { 
+        #extension-text {
+            width: 80%;
+        }
+
+        .extension-cards {
+            width: 80%;
+        }
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        margin-top: 10%;
+        .extension-cards {
+            gap: 2rem;
+            padding: 0;
+            width: 100%;
+            .custom-card {
+                &-top {
+                    padding: 0.5rem;
+
+                    p {
+                        font-size: 0.9rem;
+                    }
+
+                    img {
+                        padding: 1rem;
+                    }
+                }
+                &-bottom {
+                    padding: 1rem;
+
+                    .btn {
+                        padding: 0.5rem 1.25rem;
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+
+            .custom-card:nth-of-type(2) {
+                transform: translateY(10%);
+            }
+
+            .custom-card:nth-of-type(3) {
+                transform: translateY(20%);
+            }
+        }
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        p {
+            font-size: 1.2rem;
+        } 
+        .extension-cards {
+            gap: 1.5rem;
+            .custom-card {
+                &-bottom {
+                    padding: 1.25rem 0;
+    
+                    .btn {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) { 
+        #extension-text {
+            width: 70%;
+        }
+
+        .extension-cards {
+            gap: 3rem;
+            max-width: 90%;
+
+            .custom-card-top {
+                img {
+                    padding: 1.5rem 0;
+                }
+            }
+        }
+     }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1400px) { 
+        #extension-text {
+            width: 60%;
+        }
+
+        .extension-cards {
+            max-width: 1200px;
+
+            .custom-card-top {
+                padding: 2rem;
+            }
+        }
+     }
+}
