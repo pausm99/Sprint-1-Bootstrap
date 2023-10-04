@@ -1,0 +1,260 @@
+#features {
+    margin: 0 auto;
+    width: 95%;
+    text-align: center;
+    gap: 2rem;
+
+    ul {
+        justify-content: center;
+    }
+
+    .nav {
+        border: 0;
+        border-radius: 0;
+        align-items: center;
+        border-top: 1px solid $gray-500;
+        margin: 2rem 0;
+        flex-wrap: nowrap;
+        flex-direction: column;
+
+        .nav-item {
+            border-bottom: 1px solid $gray-500;
+            width: 100%;
+            position: relative;
+
+            .nav-link {
+                color: $gray-600;
+                font-weight: 500;
+                margin: 0 auto;
+                padding: 0.75rem 0;
+                border: 0;
+                background: transparent;
+            }
+
+            .nav-link:hover {
+                cursor: pointer;
+            }
+
+            .nav-link.active {
+                color: $gray-800;
+            }
+
+            .nav-link.active::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 50%;
+                left: 25%;
+                height: 3px;
+                background-color: $secondary;
+            }
+        }
+    }
+
+    
+
+    & {
+        &-content {
+            #tab-content {
+                .tab-pane {
+                    .pane-image {
+                        position: relative;
+                        margin-bottom: 20%;
+
+                        .aux::before {
+                            content: "";
+                            height: 100%;
+                            width: 80%;
+                            background-color: #5265e1;
+                            position: absolute;
+                            top: 20%;
+                            left: -10%;
+                            border-radius: 0 30% 30% 0;
+                            z-index: -1;
+                        }
+                        
+                        img {
+                            height: 200px;
+                            width: 100%;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .pane-body {
+                        margin-top: 2rem;
+                        .btn {
+                            display: none;
+                        }
+                    }
+                }
+                
+            }
+        }
+        
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        margin-top: 3rem;
+        & {
+            &-selector {
+                p {
+                    margin-top: 1rem;
+                }
+            }
+            &-content {
+                #tab-content {
+                    .tab-pane {
+                        .pane-image {
+                            .aux::before {
+                                width: 75%;
+                            }
+                            img {
+                                height: 280px;
+                            }
+                        }
+                    }                   
+                }
+            }           
+        }      
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        p {
+            font-size: 1.1rem;
+        }
+
+        margin-top: 4rem;
+        & {
+            &-selector {
+                p {
+                    margin-top: 1rem;
+                }
+                width: 80%;
+                margin: 0 auto;
+                .nav {
+                    flex-direction: row;
+                    border-top: none;
+
+                    .nav-item {
+                        .nav-link {
+                            padding: 1.5rem 0;
+                        }
+                        .nav-link.active::before {
+                            width: 100%;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+            &-content {
+                #tab-content {
+                    .active {
+                        display: flex !important;
+                    }
+                    .tab-pane {
+                        .pane-image {
+                            margin: 0;
+                            .aux::before {
+                                width: 85%;
+                                border-radius: 0 30% 30% 0;
+                                top: 30%;
+                                height: 80%;
+                            }
+                            img {
+                                height: 300px;
+                            }
+                        }
+                        .pane-body {
+                            margin: 0;
+                            padding: 1rem;
+                            padding-left: 2.5rem;
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            text-align: left;
+                            .btn {
+                                display: block;
+                                padding: 0.8rem 1.5rem;
+                                width: fit-content;
+                            }
+                        }
+                    }                   
+                }
+            }           
+        }
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        width: 90%;
+        margin-top: 0;
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        & {
+            &-selector {
+                width: 70%;
+            }
+
+            &-content {
+                #tab-content {
+                    .tab-pane {
+                        text-align: left;
+                        .pane-image {
+                            .aux::before {
+                                left: -12%;
+                                top: 25%;
+                                height: 90%;
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        width: 80%;
+        &-selector {
+            width: 60%;
+        }
+        &-content {
+            #tab-content {
+                .tab-pane {
+                    .pane-image {
+                        .aux::before {
+                            height: 95%;
+                            left: -25%;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1400px) {
+        &-selector {
+            width: 50%;
+        }
+        &-content {
+            #tab-content {
+                .tab-pane {
+                    .pane-image {
+                        .aux::before {
+                            height: 95%;
+                            left: -25%;
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
