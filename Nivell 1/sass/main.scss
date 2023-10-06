@@ -1,6 +1,8 @@
 //custom variables
 $primary: #5265E1;
 $secondary: #FA5959;
+$accordion-button-icon: url("../img/icon-arrow.svg");
+$accordion-button-active-icon: url("../img/icon-arrow.svg");
 
 @import '../node_modules/bootstrap/scss/bootstrap';
 @import 'components/navbar';
@@ -8,6 +10,7 @@ $secondary: #FA5959;
 @import 'components/mainContent';
 @import 'components/features';
 @import 'components/extension';
+@import 'components/faqs';
 
 * {
     box-sizing: border-box;
@@ -26,4 +29,6 @@ button {
 p {
     color: $gray-500;
 }
+
+
 
