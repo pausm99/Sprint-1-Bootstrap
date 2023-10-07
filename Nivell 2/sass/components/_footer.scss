@@ -1,0 +1,198 @@
+.footer {
+    margin-top: 10%;
+
+    * {
+        color: $white;
+    }
+
+    input, button {
+        padding: 1rem
+    }
+
+    &-form {
+        text-align: center !important;
+        padding: 4.5rem 0;
+
+        & > * {
+            margin: 0 auto;
+            width: 95%;
+        }
+
+        &-header {
+            margin-bottom: 1rem !important;
+
+            h3 {
+                font-size: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+        }
+
+        #form {
+            .form-group {
+
+                #inputEmail {
+                    border: 0;
+                    color: $black;
+                }
+
+                #inputEmail::placeholder {
+                    color: $gray-400;
+                }
+
+                .invalid-feedback {
+                    font-style: italic;
+                    text-align: left;
+                    position: absolute;
+                    color: $secondary;
+                }
+            }
+
+            .submit-button {
+                margin-top: 2rem;
+
+                button {
+                    width: 100%;
+                    box-shadow: none;
+                    font-weight: 500;
+                }
+            }
+        }
+    } 
+
+    &-links {
+        text-align: center;
+        background-color: rgb(37,41,61);
+        padding: 4rem 0;
+        margin: 0;
+
+        .footer-image {
+            img {
+                transform: scale(1.25);
+            }
+        }
+
+        .page-links {
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    font-weight: 300;
+                    font-size: 1.3rem;
+                    margin: 2rem 0;
+                }
+
+                li:first-of-type {
+                    margin-top: 0;
+                }
+
+                li:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .social {
+            gap: 4rem;
+            font-size: 1.25rem;
+            justify-content: center;
+
+            &-link {
+                img {
+                    transform: scale(1.25);
+                }
+            }
+        }
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        #form {
+            justify-content: center;
+            padding: 0 2rem;
+
+            .submit-button {
+                margin-top: 1rem;
+            }
+        }
+
+        .footer-links {
+            padding: 1.25rem 3rem;
+
+            .footer-image {
+                padding: 0;
+
+                img {
+                    transform: scale(0.85);
+                }
+            }
+
+            .page-links {
+                padding: 0 2rem;
+
+                ul {
+                    display: flex;
+                    gap: 1.5rem;
+    
+                    li {
+                        margin: 0;
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+
+            .social {
+                gap: 1.5rem;
+                padding: 0;
+                justify-content: flex-end;
+
+                &-link {
+                    img {
+                        transform: scale(0.85);
+                    }
+                }
+            }
+        }
+     }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) { 
+        .footer-form > * {
+            width: 65%;
+        }
+
+        #form {
+            padding: 0 !important;
+        }
+
+        .footer-links {
+            padding-left: 10% !important; 
+            padding-right: 10% !important;
+
+            .page-links {
+                padding: 0 !important;
+            }
+        }
+
+        
+    }
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) { 
+        .footer-form > * {
+            width: 50%;
+        }
+    }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1400px) { 
+        .footer-form > * {
+            width: 40%;
+        }
+    }
+    
+}

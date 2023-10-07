@@ -1,0 +1,83 @@
+.faqs {
+    text-align: center;
+    margin: 2rem auto;
+    width: 95%;
+    gap: 2rem;
+
+    & > * {
+        padding: 0 1.25rem;
+    }
+
+    &-header h2 {
+        padding: 0 2rem;
+    }
+
+    .accordion {
+        width: 100%;
+
+        &-item {
+            border-left: none;
+            border-right: none;
+            
+            .accordion-header {
+                .accordion-button {
+                    box-shadow: none;
+                    padding-left: 0;
+                }
+
+                .accordion-button:not(.collapsed) {
+                    background-color: transparent;
+                    color: inherit;
+                }
+
+                .accordion-button:not(.collapsed)::after {
+                    filter: invert(46%) sepia(39%) saturate(2929%) hue-rotate(329deg) brightness(100%) contrast(95%);
+                }
+                
+            }
+            & > div {
+                text-align: left;
+                color: $gray-700;
+                
+                .accordion-body {
+                    padding-left: 0;
+                    padding-bottom: 2rem;
+                }
+            }
+        }
+
+        &-item:last-child {
+            border-bottom: 1px solid #dee2e6;
+        }
+    }
+
+    .btn {
+        display: block;
+        padding: 0.8rem 1.5rem;
+        width: fit-content;
+        margin-top: 1.5rem;
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        width: 75%;
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) { 
+        width: 60%;
+        .accordion-button, p, .accordion-body, .btn {
+            font-size: 1.2rem;
+        }
+    }
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) { 
+        width: 50%;
+    }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1400px) { 
+        width: 40%;
+    }
+}
