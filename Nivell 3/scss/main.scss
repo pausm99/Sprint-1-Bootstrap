@@ -1,0 +1,52 @@
+//custom variables
+$primary: #5265E1;
+$secondary: #FA5959;
+$accordion-button-icon: url("../img/icon-arrow.svg");
+$accordion-button-active-icon: url("../img/icon-arrow.svg");
+$form-feedback-icon-invalid: url("../img/icon-error.svg");
+$form-feedback-invalid-color: $secondary;
+$btn-border-width: 3px;
+$btn-font-weight: 500;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import 'components/navbar';
+@import 'components/mobileNavbar';
+@import 'components/mainPage';
+@import 'components/mainContent';
+@import 'components/features';
+@import 'components/extension';
+@import 'components/faqs';
+@import 'components/footer';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+button {
+    box-shadow: 0px 6px 6px $gray-300;
+}
+
+.btn:hover {
+    background-color: $white !important;
+}
+
+.btn-primary:hover {
+    color: $primary;
+}
+
+.btn-secondary:hover {
+    color: $secondary;
+}
+
+p {
+    color: $gray-500;
+}
+
+
+
